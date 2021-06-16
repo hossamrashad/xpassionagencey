@@ -1,0 +1,603 @@
+.parent-overlay {
+  background-color: #eee;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  @include prefix(animation, fadeInOut 2s infinite linear, webkit);
+  @include prefix(box-shadow, 10px 10px 100px rgb(0, 0, 0), webkit moz o ms);
+  .overlay {
+    @include overlay;
+    //@include transition(0.5s);
+
+    @include hover {
+      background-color: rgba($text-color, 0.5);
+      @include prefix(box-shadow, 10px 10px 10px #ccc, webkit moz o ms);
+    }
+  }
+}
+@include KeyFrame(fadeInOut) {
+  0% {
+    opacity: 0.5;
+    background-color: aqua;
+  }
+  50% {
+    opacity: 1;
+    background-color: chocolate;
+  }
+  100% {
+    opacity: 0.5;
+    background-color: darkgreen;
+  }
+}
+// bootstrap slider
+// add parent have class home-page-slider
+.css-home-page-slider {
+  border: 20px solid #333;
+
+  // All Img
+  img {
+    background-size: cover;
+  }
+  #carouselExampleCaptions {
+    border: 20px solid rgb(105, 96, 96);
+    // ol
+    .carousel-indicators {
+      border: 3px solid #3498db;
+      // li
+      li.active {
+        background-color: #333;
+      }
+      li {
+        background-color: aquamarine;
+      }
+    }
+    // div carousel-inner
+    .carousel-inner {
+      // div carousel-item active
+      .carousel-item.active {
+        // img
+        img {
+          border: 5px solid #080;
+        }
+        // div center-position carousel-caption d-none d-md-block
+        > div {
+          background-color: rgba(14, 197, 253, 0.404);
+          padding: 50px;
+        }
+      }
+      // div carousel-item
+      .carousel-item {
+        // img
+        img {
+        }
+        // div
+        > div {
+          background-color: rgba(51, 51, 51, 0.801);
+          padding: 50px;
+          @include positionCenter;
+          @include transitionAll(all, 0.5s, linear);
+        }
+      }
+      // a
+      .carousel-control-prev,
+      .carousel-control-next {
+        // span
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+        }
+        .sr-only {
+        }
+      }
+    }
+  }
+}
+
+// services
+.services {
+  padding-top: $main-padding;
+  background: url(../images/home-page/services/section-services.png);
+  h6.h5 {
+    padding-bottom: 30px;
+  }
+  p.lead {
+    // font-family: $font-Droid;
+    line-height: 1.3;
+    padding: $main-text-padding;
+    font-size: $page-font + 4;
+    background-color: $third-color;
+    position: relative;
+    @include borderRadius(15px);
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+      width: 0%;
+      height: 2%;
+      background-color: $main-color;
+      border-bottom: 2px solid $third-color;
+      @include transitionAll(all, 1s, linear);
+    }
+    @include hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  .parent-services-item {
+    padding-top: $main-padding;
+    padding-bottom: $main-padding - 80;
+    .child-services-item {
+      background-color: $color-fff;
+      height: 130px;
+      margin-bottom: $main-margin;
+      @include flexCenter;
+      @include transitionAll(all, 0.5s, linear);
+      @include borderRadius(10px);
+      @include boxShadow(-1px, 0px, 10px, #000);
+      a {
+        i {
+          color: $main-color;
+          font-size: $font-lg + 10;
+        }
+        h6 {
+          color: $color-333;
+          font-weight: bold;
+        }
+      }
+      &:hover {
+        background-color: $main-color;
+        @include translateY(-10px);
+        a {
+          i {
+            color: $color-fff;
+          }
+          h6 {
+            color: $color-fff;
+          }
+        }
+      }
+    }
+    .child-services-item.tow {
+      @include translateY(-40px);
+      &:hover {
+        @include translateY(-60px);
+      }
+    }
+    .child-services-item.four {
+      @include translateY(-40px);
+      &:hover {
+        @include translateY(-60px);
+      }
+    }
+    .child-services-item.sex {
+      @include translateY(-40px);
+      &:hover {
+        @include translateY(-60px);
+      }
+    }
+    .child-services-item.eight {
+      @include translateY(-40px);
+      &:hover {
+        @include translateY(-60px);
+      }
+    }
+    .child-services-item.ten {
+      @include translateY(-40px);
+      &:hover {
+        @include translateY(-60px);
+      }
+    }
+    .child-services-item.twelve {
+      @include translateY(-40px);
+      &:hover {
+        @include translateY(-60px);
+      }
+    }
+    .child-services-item.Fourteen {
+      @include translateY(-40px);
+      &:hover {
+        @include translateY(-60px);
+      }
+    }
+  }
+}
+
+// about-our-services
+.about-our-services {
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
+  background-color: $third-color;
+  .word {
+    .word-one {
+      position: relative;
+      z-index: 9;
+      margin-bottom: 17px;
+      padding: 0 8px 0 3px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background-color: $main-color;
+        z-index: -9;
+      }
+    }
+    .word-tow {
+      position: relative;
+      z-index: 9;
+      margin-bottom: 17px;
+      padding: 0 8px 0 3px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background-color: $second-color;
+        z-index: -9;
+      }
+    }
+  }
+  .disc {
+    a {
+      background-color: $second-color;
+      color: #fff;
+      border: 1px solid transparent;
+      padding: 10px 30px;
+      @include borderRadius(5px);
+      @include transitionAll(all, 0.3s, linear);
+      i {
+        margin-top: 5px;
+      }
+      @include hover {
+        color: $main-color;
+        background-color: #fff;
+        border: 1px solid $main-color;
+      }
+    }
+  }
+  .inner {
+    margin-top: $main-margin;
+    .parent-img {
+      float: right;
+      width: 90.5%;
+      height: auto;
+      margin-right: 9.5%;
+      position: relative;
+      z-index: 1;
+      @include xs-media {
+        width: 100%;
+      margin-right: 0;
+      }
+      .img-one {
+        background-image: url(../images/home-page/about-our-services/s1.jpg);
+        background-size: cover;
+        height: 300px;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        @include xs-media {
+          clear: both;
+          margin-top: 30px;
+        }
+      }
+      .img-three {
+        background-image: url(../images/home-page/about-our-services/s3.jpg);
+        background-size: cover;
+        height: 300px;
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        @include xs-media {
+          clear: both;
+          margin-top: 30px;
+        }
+      }
+      .outlne-txt {
+        position: absolute;
+        top: -90px;
+        right: -80px;
+        font-family: Oswald, sans-serif;
+        font-size: 140px;
+        color: #3c3d48;
+        font-weight: 700;
+        z-index: -1;
+        background: #5d057f;
+        background: -moz-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          color-stop(0, #5d057f),
+          color-stop(100%, #c10446)
+        );
+        background: -webkit-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: -o-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: -ms-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: linear-gradient(to right, #5d057f 0, #c10446 100%);
+        -pie-background: linear-gradient(to right, #5d057f, #c10446);
+        color: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 3px transparent;
+        text-stroke: 3px transparent;
+        display: inline-block;
+        @include xs-media {
+          display: none;
+        }
+      }
+    }
+    .parent-img-tow {
+      float: right;
+      width: 90.5%;
+      height: auto;
+      margin-left: 9.5%;
+      position: relative;
+      z-index: 1;
+      @include xs-media{
+        width: 100%;margin-left: 0;
+      }
+      .img-tow {
+        background-image: url(../images/home-page/about-our-services/s2.jpg);
+        background-size: cover;
+        height: 300px;
+        float: right;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        @include xs-media {
+          clear: both;
+          margin-bottom: 30px;
+        }
+      }
+      .outlne-txt-tow {
+        position: absolute;
+        top: -90px;
+        left: -57px;
+        font-family: Oswald, sans-serif;
+        font-size: 140px;
+        color: #3c3d48;
+        font-weight: 700;
+        z-index: -1;
+        background: #5d057f;
+        background: -moz-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          color-stop(0, #5d057f),
+          color-stop(100%, #c10446)
+        );
+        background: -webkit-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: -o-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: -ms-linear-gradient(left, #5d057f 0, #c10446 100%);
+        background: linear-gradient(to right, #5d057f 0, #c10446 100%);
+        -pie-background: linear-gradient(to right, #5d057f, #c10446);
+        color: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 3px transparent;
+        text-stroke: 3px transparent;
+        display: inline-block;
+        @include xs-media {
+          display: none;
+        }
+      }
+    }
+    .disc-one,
+    .disc-tow,
+    .disc-three {
+      .h1 {
+        font-family: Oswald, sans-serif;
+        font-size: 40px;
+        color: #3c3d48;
+        font-weight: 700;
+        color: $main-color;
+        -webkit-text-fill-color: transparent;
+        background: $main-color;
+        background: -moz-linear-gradient(
+          left,
+          $main-color 0,
+          $second-color 100%
+        );
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          color-stop(0, $main-color),
+          color-stop(100%, $second-color)
+        );
+        background: -webkit-linear-gradient(
+          left,
+          $main-color 0,
+          $second-color 100%
+        );
+        background: -o-linear-gradient(left, $main-color 0, $second-color 100%);
+        background: -ms-linear-gradient(
+          left,
+          $main-color 0,
+          $second-color 100%
+        );
+        background: linear-gradient(
+          to right,
+          $main-color 0,
+          $second-color 100%
+        );
+        -pie-background: linear-gradient(to right, $main-color, $second-color);
+        -webkit-background-clip: text;
+        display: inline-block;
+        text-transform: uppercase;
+        line-height: 1.28;
+        padding-bottom: 33px;
+      }
+      p.lead {
+        margin-bottom: 30px;
+      }
+      a {
+        background-color: $main-color;
+        color: #fff;
+        border: 1px solid transparent;
+        padding: 10px 30px;
+        @include borderRadius(5px);
+        @include transitionAll(all, 0.3s, linear);
+
+        @include hover {
+          color: $main-color;
+          background-color: #fff;
+          border: 1px solid $main-color;
+        }
+      }
+    }
+  }
+}
+
+// call-section
+.call-section {
+  background-color: $main-color;
+  color: #fff;
+  padding: 30px 0px;
+  min-height: 100px;
+  .mid_inner {
+    width: 100%;
+    position: relative;
+    @include clearfix;
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    .img {
+      float: $float-right;
+      width: 20%;
+    }
+    .short_detail {
+      float: $float-right;
+      width: calc(100% - 21%);
+      padding-right: 10px;
+      p {
+        font-weight: bold;
+        margin-bottom: 5px;
+        @include sm-md-media {
+          font-size: $page-font - 2;
+          font-weight: normal;
+        }
+      }
+      h3 {
+        a {
+          color: #fff;
+          font-size: $page-font;
+          @include xs-media {
+            font-size: $page-font - 4;
+          }
+          @include sm-md-media {
+            font-size: $page-font - 7;
+          }
+        }
+        a.mailto {
+          @include md-media {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// count
+.count {
+  background-image: url(../images/home-page/count/count.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  margin: $main-margin 0 0 0;
+  padding: $main-padding 0;
+  .head {
+    padding-top: $main-text-padding;
+    h3 {
+      font-size: 20px;
+      padding-bottom: 10px;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: 17px;
+    }
+    p {
+      font-size: $page-font;
+      padding: $main-text-padding 0;
+      line-height: 1.5;
+    }
+  }
+  .inner {
+    > div {
+      display: inline-block;
+    }
+    .jq-countTo-10,
+    .jq-countTo-27,
+    .jq-countTo-900 {
+      color: #fff;
+      font-size: 30px;
+      margin-left: 20px;
+      font: {
+        size: $font-page + 10;
+        weight: bold;
+        family: Arial, Helvetica, sans-serif;
+      }
+    }
+    .disc {
+      vertical-align: middle;
+      font-weight: bold;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .head {
+        color: $main-color;
+        font: {
+          size: $font-page + 10;
+          weight: bold;
+          family: Arial, Helvetica, sans-serif;
+        }
+      }
+    }
+  }
+}
+
+// our-clients
+.our-clients {
+  background-color: $third-color;
+  padding: $main-padding 0;
+  .disc {
+    padding-bottom: $main-text-padding;
+    .h3 {
+      color: $main-color;
+      font-size: $page-font + 10;
+    }
+    .h4 {
+      font-size: $page-font + 2;
+    }
+  }
+  .owl-carousel.owl-theme {
+    .item {
+      .single-clients {
+        height: 50px;
+        img {
+          background-size: cover;
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+    .owl-nav {
+      display: none;
+    }
+  }
+}

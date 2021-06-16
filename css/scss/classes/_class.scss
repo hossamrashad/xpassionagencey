@@ -1,0 +1,46 @@
+// color || background-color
+.color-fff {
+  color: map-get($colors, fff);
+}
+
+.back-fff {
+  background-color: map-get($colors, fff);
+}
+
+.color-999 {
+  color: map-get($colors, 999);
+}
+.back-999 {
+  background-color: map-get($colors, 999);
+}
+
+.main-color {
+  color: $main-color;
+}
+.main-back {
+  background-color: $main-color;
+}
+
+.second-color {
+  color: $second-color;
+}
+.second-back {
+  background-color: $second-color;
+}
+
+.third-color {
+  color: $third-color;
+}
+
+.back-third {
+  background-color: $third-color;
+}
+.main-border{
+  border: 1px solid $main-color;
+}
+.second-border{
+  border: 1px solid $second-color;
+}
+.third-border{
+  border: 1px solid $third-color;
+}

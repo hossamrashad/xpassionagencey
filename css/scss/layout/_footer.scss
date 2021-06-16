@@ -1,0 +1,300 @@
+// footer
+footer.footer {
+  padding-top: 40px;
+  // box-right
+  .box-right {
+    .media-global,
+    .website {
+      p.lead {
+        font-size: $font-page;
+      }
+      ul {
+        li {
+          padding-bottom: 5px;
+          a {
+            color: $third-color;
+            font-size: $font-page - 3;
+          }
+        }
+      }
+    }
+    p.lead {
+      font-size: $page-font - 4;
+      word-spacing: 3px;
+    }
+  }
+  // shopping
+  .shopping {
+    .top,
+    .button {
+      p.lead {
+        color: $main-color;
+        font-size: $page-font;
+      }
+      ul {
+        li {
+          padding-bottom: 5px;
+          a {
+            color: $third-color;
+            font-size: $page-font - 2;
+          }
+        }
+      }
+    }
+  }
+  // address-follow
+  .address-follow {
+    .address {
+      p.lead.active {
+        font-size: $page-font;
+        color: $main-color;
+      }
+      p.lead {
+        font-size: $page-font;
+        color: $third-color;
+        word-spacing: 3px;
+      }
+    }
+  }
+
+  // links-page
+  .links-page {
+    .links {
+      li {
+        padding-bottom: 5px;
+        a.active {
+          font-size: $font-page - 3;
+          color: $main-color;
+        }
+        a {
+          font-size: $font-page - 3;
+          color: $third-color;
+          @include transitionAll(all, 0.5s, linear);
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+    .call {
+      li {
+        a {
+          color: $third-color;
+          i {
+            color: $main-color;
+            margin-left: 10px;
+            // ltr
+            // margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    border-top: 2px solid $third-color;
+    margin: 0px;
+    padding: 30px 0px;
+    color: #fff;
+    text-align: center;
+    p.lead {
+      font-size: $page-font;
+    }
+    .lead,
+    .link {
+      display: inline-block;
+    }
+    .link {
+      margin-right: 20px;
+      a {
+        text-decoration: none;
+        color: map-get($colors, 3498db);
+        font-size: $page-font;
+        font-weight: bolder;
+        > div {
+          display: inline-block;
+        }
+        .css-parent-text-shadow-15-5 {
+          display: inline-block;
+          background: rgb(173, 173, 173);
+          padding: 5px;
+          @include borderRadius(5px);
+          h4 {
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            @include transition(0.5s);
+            &:hover {
+              text-shadow: -1px -1px 1px #333, 0 1px 0 #333, 0 2px 0 #333,
+                0 2px 0 #333, 0 3px 0 #333, 0 4px 0 #333, 0 5px 0 #333,
+                0 6px 0 #333, 0 7px 0 #333, 0 8px 0 #333, 0 9px 0 #333,
+                0 10px 0 #333, 0 11px 0 #333, 0 12px 0 #333, 0 13px 0 #333,
+                0 14px 0 #333, 0 15px 0 #333, 10px 25px 35px rgba(0, 0, 0, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// whatsapp fixed
+// ltr
+.whatsapp-chat {
+  position: fixed;
+  bottom: 0;
+  right: 250px;
+  background: $main-color;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 99999;
+  transition: 0.3s ease-in;
+  height: 43px;
+  a {
+    color: #fff !important;
+    font-size: $page-font;
+    padding: 20px 10px;
+    text-decoration: none;
+    i {
+      margin-top: 10px;
+    }
+  }
+}
+
+// btn-show-popup
+.btn-show-popup-chat {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 245px;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  z-index: 9999;
+  // border: 1px solid $second-color;
+  background-color: $main-color;
+  color: $color-fff;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  @include borderRadius(5px);
+  @include transitionAll(all, 0.2s, linear);
+  @include hover {
+    border: none;
+    background-color: $second-color;
+    color: $main-color;
+    @include borderRadius(2px);
+  }
+}
+// popup chat
+.popup-chat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  height: 450px;
+  z-index: 9999;
+  background-color: $main-color;
+  display: none;
+  //
+  .inner {
+    position: fixed;
+    background-color: $color-fff;
+    width: 95%;
+    overflow: auto;
+    height: 400px;
+    padding: 15px;
+    p.lead {
+      font-size: $font-page;
+      text-align: center;
+    }
+    @include positionCenter;
+    @include borderRadius(5px);
+    .box-form {
+      margin-top: 25px;
+      form {
+        div.input-group {
+          margin-bottom: 30px;
+          input,
+          textarea {
+            font-size: $page-font;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 90%;
+            border: 1px solid $third-color;
+            background-color: transparent;
+            color: $second-color;
+            margin: auto;
+            @include borderRadius(5px);
+            @include transitionAll(all, 0.5s, linear);
+            &:focus {
+              outline: none;
+              border: 1px solid $main-color;
+            }
+          }
+          label {
+            color: #999;
+            font-size: $page-font;
+            position: absolute;
+            pointer-events: none;
+            right: 20px;
+            top: 10px;
+            @include transitionAll(all, 0.3s, linear);
+          }
+          input:focus ~ label,
+          input:valid ~ label {
+            top: -20px;
+            font-size: $page-font - 3;
+            color: $main-color;
+          }
+          textarea:focus ~ label {
+            top: -20px;
+            font-size: $page-font - 3;
+            color: $main-color;
+          }
+        }
+        a {
+          text-decoration: none;
+          background-color: $main-color;
+          color: #fff;
+          padding: 10px 35px;
+          margin-left: 40px;
+          @include borderRadius(5px);
+          text-transform: uppercase;
+          margin-top: 15px;
+          display: inline-block;
+          letter-spacing: 3px;
+          i {
+          }
+        }
+      }
+    }
+    .close {
+      position: fixed;
+      bottom: 23px;
+      left: 5px;
+      padding: 13px 12px;
+      background-color: $second-color;
+      // border: 1px solid $main-color;
+      color: #fff;
+      @include borderRadius(5px);
+      cursor: pointer;
+    }
+  }
+}
+
+// google
+.google-rating {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  z-index: 1000;
+  a {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+   @include boxShadow(-1px, 0px, 10px, #fff);
+    transition: width 0.3s cubic-bezier(0.405, 0.07, 0.575, 0.995);
+  }
+}
