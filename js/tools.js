@@ -27,25 +27,29 @@
  *
  * jq-box-read-more
  */
-// window height
+
+
+/* Window Height */
 $(function () {
   "use strict";
-  // Window Height
   var windowH = $(window).height();
-
   $(".jq-window-height").height(windowH);
 
   $(window).resize(function () {
     $(".jq-window-height").height(windowH);
   });
-
-  // Window Height / 2
+});
+$(function () {
+  "use strict";
+  // windowHeight-middle
+  var windowH = $(window).height();
   $(".jq-window-height-2").height(windowH / 2);
-
   $(window).resize(function () {
     $(".jq-window-height-2").height(windowH / 2);
   });
 });
+
+
 
 // fixed menu
 $(document).ready(function () {

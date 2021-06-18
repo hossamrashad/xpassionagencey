@@ -42,6 +42,147 @@ footer.footer {
       }
     }
   }
+  //
+  .parent-dynamic-tabs {
+    .row {
+      margin: 0;
+      padding: 0;
+      .col-xs-12 {
+        padding: 0;
+      }
+    }
+    p.lead {
+      color: $main-color;
+    }
+    .dynamic-tabs {
+      .content-list {
+        background-color: #fff;
+        position: relative;
+        width: 100%;
+        & > div {
+          padding: 20px 0;
+          min-height: 200px;
+          color: #fff;
+        }
+        & > div:not(:first-child) {
+          display: none;
+        }
+      }
+      .card {
+        .user-img{
+          max-height: 200px;
+          display: block;
+          overflow: hidden;
+          img {
+            min-height: 200px !important;
+            width: 100%;
+            @include borderRadius(5px);
+          }
+        }
+       
+        .user-info {
+          .h2 {
+            font-size: $page-font + 3;
+            text-align: center;
+            color: $main-color;
+            padding-top: 20px;
+          }
+          p.lead {
+            color: $second-color;
+            font-size: $page-font;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          a.btn-icon {
+            display: block;
+            width: 70%;
+            margin: auto;
+            background-color: $second-color;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            @include borderRadius(5px);
+            i {
+              color: $main-color;
+              // rtl
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+      // ul
+      ul.tabs-list {
+        list-style: none;
+        margin: 20px 0;
+        padding: 10px 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(16.666%, 1fr));
+        gap: 0px 0px;
+        background-color: #fff;
+        @include transitionAll(all, 0.3s, linear);
+        @include borderRadiusposition(5px, 15px, 15px, 5px);
+        @include hover {
+        @include borderRadiusposition(15px, 5px, 5px, 15px);
+        }
+        li {
+          display: inline-block;
+          position: relative;
+          top: 1px;
+          cursor: pointer;
+          font-weight: bold;
+          
+          span {
+            @include borderRadius(50%);
+            i {
+              font-size: 20px;
+              @include transitionAll(all, 0.5s, linear);
+              
+              &.fa-youtube {
+                color: #ff0000;
+                &:hover {
+                  color: $main-color;
+                }
+              }
+              &.fa-facebook {
+                color: #3b5998;
+                &:hover {
+                  color: $main-color;
+                }
+              }
+              &.fa-instagram {
+                color: #e1306c;
+                &:hover {
+                  color: $main-color;
+                }
+              }
+              &.fa-linkedin {
+                color: #00a0dc;
+                &:hover {
+                  color: $main-color;
+                }
+              }
+              &.fa-pinterest {
+                color: #e60023;
+                &:hover {
+                  color: $main-color;
+                }
+              }
+              &.fa-twitter {
+                color: #1da1f2;
+                &:hover {
+                  color: $main-color;
+                }
+              }
+            }
+          }
+        }
+        li.active {
+          color: $main-color;
+          z-index: 2;
+        }
+      }
+    }
+  }
   // address-follow
   .address-follow {
     .address {
@@ -294,7 +435,7 @@ footer.footer {
     display: flex;
     flex-flow: column;
     width: 100%;
-   @include boxShadow(-1px, 0px, 10px, #fff);
+    @include boxShadow(-1px, 0px, 10px, #fff);
     transition: width 0.3s cubic-bezier(0.405, 0.07, 0.575, 0.995);
   }
 }

@@ -100,12 +100,22 @@ $(document).ready(function () {
         items: 2,
       },
       600: {
-        items: 4,
+        items: 2,
       },
       1000: {
-        items: 6,
+        items: 4,
       },
     },
+  });
+
+  // mousewheel owl-carousel
+  $(".owl-carousel").on("mousewheel", ".owl-stage", function (e) {
+    if (e.deltaY > 0) {
+      $(".owl-carousel").trigger("next.owl");
+    } else {
+      $(".owl-carousel").trigger("prev.owl");
+    }
+    e.preventDefault();
   });
 
   // magnific
@@ -181,54 +191,32 @@ $(document).ready(function () {
   // });
 
   // countTo
-  $(".jq-countTo-10").countTo({
+  $(".jq-countTo-245").countTo({
     from: 0,
-    to: 10,
+    to: 245,
     speed: 5000,
     refreshInterval: 50,
   });
-  $(".jq-countTo-27").countTo({
+  $(".jq-countTo-491").countTo({
     from: 0,
-    to: 27,
+    to: 491,
     speed: 7500,
     refreshInterval: 50,
   });
-  $(".jq-countTo-900").countTo({
+  $(".jq-countTo-1090").countTo({
     from: 0,
-    to: 900,
+    to: 1090,
     speed: 9000,
     refreshInterval: 50,
   });
-  // typed js
-  $(function () {
-    "use strict";
-
-    var typed = new Typed(".jq-typed-text", {
-      // Waits 1000ms after typing "First"
-      strings: ["البحث فى الموقع."],
-      typeSpeed: 100,
-      startDelay: 5000,
-      backDelay: 1000,
-      loop: true,
-      // loopCount:3, == Number of loop
-      loopCount: false,
-      cursorChar: " ",
-      showCursor: true,
-    });
+  $(".jq-countTo-1790").countTo({
+    from: 0,
+    to: 1790,
+    speed: 12000,
+    refreshInterval: 50,
   });
-  $(function () {
-    "use strict";
-    
-  });
-
-  // mousewheel owl-carousel
-  $(".owl-carousel").on("mousewheel", ".owl-stage", function (e) {
-    if (e.deltaY > 0) {
-      $(".owl-carousel").trigger("next.owl");
-    } else {
-      $(".owl-carousel").trigger("prev.owl");
-    }
-    e.preventDefault();
-  });
+  
 });
 // end
+
+

@@ -273,7 +273,7 @@
       z-index: 1;
       @include xs-media {
         width: 100%;
-      margin-right: 0;
+        margin-right: 0;
       }
       .img-one {
         background-image: url(../images/home-page/about-our-services/s1.jpg);
@@ -341,8 +341,9 @@
       margin-left: 9.5%;
       position: relative;
       z-index: 1;
-      @include xs-media{
-        width: 100%;margin-left: 0;
+      @include xs-media {
+        width: 100%;
+        margin-left: 0;
       }
       .img-tow {
         background-image: url(../images/home-page/about-our-services/s2.jpg);
@@ -540,9 +541,10 @@
     > div {
       display: inline-block;
     }
-    .jq-countTo-10,
-    .jq-countTo-27,
-    .jq-countTo-900 {
+    .jq-countTo-1790,
+    .jq-countTo-245,
+    .jq-countTo-491,
+    .jq-countTo-1090 {
       color: #fff;
       font-size: 30px;
       margin-left: 20px;
@@ -578,26 +580,491 @@
   .disc {
     padding-bottom: $main-text-padding;
     .h3 {
-      color: $main-color;
-      font-size: $page-font + 10;
+      font-family: Oswald, sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, $main-color),
+        to($second-color)
+      );
+      background: linear-gradient(to right, $main-color 0, $second-color 100%);
+      -pie-background: linear-gradient(to right, $main-color, $second-color);
+      -webkit-background-clip: text;
+      display: inline-block;
+      line-height: 1.28;
+      padding-bottom: 33px;
     }
     .h4 {
       font-size: $page-font + 2;
     }
   }
   .owl-carousel.owl-theme {
+    margin-top: $main-margin;
     .item {
-      .single-clients {
-        height: 50px;
-        img {
-          background-size: cover;
-          height: 100%;
-          width: auto;
+      .inner {
+        padding: 30px 0 5px;
+        margin-bottom: 30px;
+        background-color: #f5f5f5;
+        text-align: center;
+        overflow: hidden;
+        @include boxShadow(-1px, 0px, 1px, $main-color);
+        width: 100%;
+        background-color: $color-fff;
+        height: 450px;
+        @include borderRadius(20px);
+        .picture {
+          display: inline-block;
+          height: 100px;
+          width: 100px;
+          z-index: 1;
+          position: relative;
+          border-radius: 20%;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 0;
+            border-radius: 50%;
+            background-color: $second-color;
+            position: absolute;
+            right: 0;
+            left: 0;
+            opacity: 0.9;
+            transform: scale(3);
+            transition: all 0.3s linear 0s;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 50%;
+            background-color: #1f1b1b;
+          }
+          img {
+            width: 100%;
+            height: auto;
+            @include borderRadius(50%);
+            @include scale(1, 1);
+            @include transitionAll(all, 0.5s, linear);
+          }
+        }
+        p.lead {
+          padding: $main-text-padding 10px 10px 10px;
+          height: 250px;
+        }
+        .social {
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
+          gap: 0px 0px;
+          margin-bottom: 20px;
+          padding: 5px;
+          @include transitionAll(all, 0.5s, linear);
+          @include translateY(200%);
+          // ltr
+          direction: rtl;
+          li {
+            a {
+              font-size: $page-font + 20;
+              @include borderRadius(50%);
+              &.fa-facebook {
+                color: #1877f2;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #1877f2);
+                }
+              }
+              &.fa-youtube {
+                color: #ff0000;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #ff0000);
+                }
+              }
+              &.fa-instagram {
+                color: #e1306c;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #e1306c);
+                }
+              }
+              &.fa-twitter {
+                color: #1da1f2;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #1da1f2);
+                }
+              }
+              &.fa-linkedin {
+                color: #caccce;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #caccce);
+                }
+              }
+              &.fa-pinterest {
+                color: #e60023;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #e60023);
+                }
+              }
+            }
+          }
+        }
+        @include hover {
+          .picture::before {
+            height: 100%;
+            margin-top: -100%;
+          }
+          .picture img {
+            box-shadow: 0 0 0 14px $main-color;
+            transform: scale(0.7);
+          }
+          .social {
+            @include translateY(0);
+          }
         }
       }
     }
     .owl-nav {
       display: none;
+    }
+  }
+}
+
+// ****************** page about ************************
+
+// slider-page-about
+.slider-page-about {
+  background-image: url(../images/page-about/back-slider.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;
+  position: relative;
+  @include lg-media {
+    background-repeat: repeat-x;
+  }
+  .inner {
+    background-image: url(../images/page-about/slider-2.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    position: relative;
+    height: calc(70vh);
+  }
+  .content {
+    // height: 300px;
+    // p jq-typed-page-about
+    .jq-typed-page-about {
+      color: #b3b3b3;
+      position: relative;
+      display: inline-block;
+      min-width: 1px;
+      min-height: 24px;
+      font-size: 32px;
+      font-family: Futura-md;
+      line-height: 1;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: $page-font + 8;
+      font-weight: bold;
+      font-family: Futura;
+      color: #b3b3b3;
+      line-height: 28px;
+    }
+    a {
+      font-size: 16px;
+      padding: 15px 25px;
+      display: inline-block;
+      text-align: center;
+      text-transform: capitalize;
+      position: relative;
+      color: #fff;
+      background: $main-color;
+    }
+    /* Bounce To Left */
+    a.hvr {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+    }
+    a.hvr:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #6a6a6a;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+    }
+    a.hvr:hover,
+    a.hvr:focus,
+    a.hvr:active {
+      color: white;
+    }
+    a.hvr:hover:before,
+    a.hvr:focus:before,
+    a.hvr:active:before {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+}
+
+// section-about
+
+.section-about {
+  // margin-top: $main-margin;
+  margin-bottom: $main-margin;
+  .disc {
+    padding-top: $main-padding;
+    .head {
+      h3.h2 {
+        font-family: Oswald, sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        -webkit-text-fill-color: transparent;
+        background: -webkit-gradient(
+          linear,
+          left top,
+          right top,
+          color-stop(0, $main-color),
+          to(#262524)
+        );
+        background: linear-gradient(to right, $main-color 0, #262524 100%);
+        -pie-background: linear-gradient(to right, $main-color, #262524);
+        -webkit-background-clip: text;
+        display: inline-block;
+        text-transform: uppercase;
+        line-height: 1.28;
+        padding-bottom: $main-text-padding;
+      }
+    }
+    .body {
+      .top {
+        margin: 0;
+        font-size: $page-font + 5;
+        padding-bottom: 5px;
+      }
+      .median {
+        margin: 0;
+        font-size: $page-font + 3;
+        padding-bottom: 5px;
+      }
+      .bottom {
+        margin: 0;
+        font-size: $page-font;
+      }
+    }
+  }
+}
+
+// how-we-are
+.how-we-are {
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
+  margin-bottom: $main-margin;
+  background-color: $third-color;
+  .title {
+    font-family: Oswald, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, $main-color),
+      to($second-color)
+    );
+    background: linear-gradient(to right, $main-color 0, $second-color 100%);
+    -pie-background: linear-gradient(to right, $main-color, $second-color);
+    -webkit-background-clip: text;
+    display: inline-block;
+    line-height: 1.28;
+    padding-bottom: 33px;
+  }
+
+  .parent-grid {
+    justify-content: space-between;
+    @include xs-media {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      gap: 0px 0px;
+    }
+
+    @include sm-media {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+      gap: 0px 0px;
+      justify-content: space-around;
+    }
+
+    @include md-media {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(19%, 1fr));
+      gap: 0px 10px;
+    }
+
+    @include lg-media {
+    }
+    .inner {
+      img {
+      }
+      h4.h3 {
+        font-weight: 400;
+        font-size: $font-sm;
+      }
+      p.lead {
+        font-size: $page-font;
+      }
+    }
+  }
+}
+
+// Our-work-speaks
+.Our-work-speaks {
+  padding-bottom: $main-padding;
+  .title {
+    font-family: Oswald, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, $main-color),
+      to($second-color)
+    );
+    background: linear-gradient(to right, $main-color 0, $second-color 100%);
+    -pie-background: linear-gradient(to right, $main-color, $second-color);
+    -webkit-background-clip: text;
+    display: inline-block;
+    line-height: 1.28;
+    padding-bottom: 33px;
+  }
+  .parent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    gap: 0px 10px;
+    @include xs-media {
+      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+      gap: 0px 20px;
+    }
+    .value {
+      @include borderRadius(50%);
+      border: 2px solid $main-color;
+      .number {
+        color: $main-color;
+        font-weight: bold;
+        font-size: $font-lg;
+      }
+      i {
+        font-size: $font-lg + 10;
+        color: $third-color;
+      }
+      p.lead {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// our-team
+
+.our-team {
+  background-image: url(../../../images/page-about/our-team/our-team.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
+  position: relative;
+  height: 600px;
+  .overlay {
+    @include overlay;
+    background-color: rgba(18, 18, 18, 0.61);
+    // z-index: -1;
+  }
+  .disc {
+    border: 1px solid $color-fff;
+    @include positionCenter;
+    padding: $main-text-padding;
+    @include borderRadiusposition(5px, 30px, 30px, 5px);
+    background-color: rgba(18, 18, 18, 0.61);
+    @include transitionAll(all, 0.5s, linear);
+    @include hover {
+      @include borderRadiusposition(30px, 5px, 5px, 30px);
+      background-color: rgba(18, 18, 18, 0.81);
+    }
+    .title {
+      font-family: Oswald, sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, $color-fff),
+        to($main-color)
+      );
+      background: linear-gradient(to left, $color-fff 0, $main-color 100%);
+      -pie-background: linear-gradient(to left, $color-fff, $main-color);
+      -webkit-background-clip: text;
+      display: inline-block;
+      line-height: 1.28;
+      padding-bottom: 33px;
+    }
+    p.lead {
+      color: $color-fff;
+    }
+  }
+}
+
+// ************** global ***************
+
+.page-name {
+  padding: 30px;
+  margin: 50px auto;
+  background-color: $second-color;
+  .breadcrumb {
+    .breadcrumb-item {
+      color: $color-fff;
+      font-weight: bold;
+    }
+    .breadcrumb-item a {
+      color: $main-color;
     }
   }
 }

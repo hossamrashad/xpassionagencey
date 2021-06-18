@@ -1,0 +1,13 @@
+:root {
+  --color-3498db: #3498db;
+  --color-fff: #ffffff;
+  --color-000: #0000000;
+  --color-333: #333333;
+  --color-f00: #ff0000;
+  --color-080: #008800;
+}
+
+header.header nav.navbar {
+  background-color: #262524;
+}
+/*# sourceMappingURL=about.css.map */
