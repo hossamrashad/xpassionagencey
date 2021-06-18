@@ -458,59 +458,7 @@
   }
 }
 
-// call-section
-.call-section {
-  background-color: $main-color;
-  color: #fff;
-  padding: 30px 0px;
-  min-height: 100px;
-  .mid_inner {
-    width: 100%;
-    position: relative;
-    @include clearfix;
-    h3 {
-      font-size: 18px;
-      line-height: 24px;
-      color: #fff;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-    .img {
-      float: $float-right;
-      width: 20%;
-    }
-    .short_detail {
-      float: $float-right;
-      width: calc(100% - 21%);
-      padding-right: 10px;
-      p {
-        font-weight: bold;
-        margin-bottom: 5px;
-        @include sm-md-media {
-          font-size: $page-font - 2;
-          font-weight: normal;
-        }
-      }
-      h3 {
-        a {
-          color: #fff;
-          font-size: $page-font;
-          @include xs-media {
-            font-size: $page-font - 4;
-          }
-          @include sm-md-media {
-            font-size: $page-font - 7;
-          }
-        }
-        a.mailto {
-          @include md-media {
-            font-size: 10px;
-          }
-        }
-      }
-    }
-  }
-}
+
 
 // count
 .count {
@@ -1052,6 +1000,9 @@
   }
 }
 
+// ************** page portfolio *********
+
+
 // ************** global ***************
 
 .page-name {
@@ -1065,6 +1016,61 @@
     }
     .breadcrumb-item a {
       color: $main-color;
+    }
+  }
+}
+
+// call-section
+.call-section {
+  background-color: $main-color;
+  margin-bottom: $main-margin;
+  color: #fff;
+  padding: 30px 0px;
+  min-height: 100px;
+  .mid_inner {
+    width: 100%;
+    position: relative;
+    @include clearfix;
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+    .img {
+      float: $float-right;
+      width: 20%;
+    }
+    .short_detail {
+      float: $float-right;
+      width: calc(100% - 21%);
+      padding-right: 10px;
+      p {
+        font-weight: bold;
+        margin-bottom: 5px;
+        @include sm-md-media {
+          font-size: $page-font - 2;
+          font-weight: normal;
+        }
+      }
+      h3 {
+        a {
+          color: #fff;
+          font-size: $page-font;
+          @include xs-media {
+            font-size: $page-font - 4;
+          }
+          @include sm-md-media {
+            font-size: $page-font - 7;
+          }
+        }
+        a.mailto {
+          @include md-media {
+            font-size: 10px;
+          }
+        }
+      }
     }
   }
 }
