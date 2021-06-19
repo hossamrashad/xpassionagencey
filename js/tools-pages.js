@@ -27,7 +27,7 @@ $(function () {
     "use strict";
   
     $("body, .paddingNavbarHeight").css("paddingTop", $(".navbar").innerHeight());
-    console.log($(".navbar").innerHeight());
+    // console.log($(".navbar").innerHeight());
   });
 
   // typed js
@@ -37,7 +37,7 @@ $(function () {
     var typed = new Typed(".jq-typed-page-about", {
       // Waits 1000ms after typing "First"
       strings: [
-        "اكس باشون شركة تصنع قصص ناحج للشركات الصغيرة والكبيرة .",
+        "اكس باشون شركة تصنع قصص نجاح للشركات الصغيرة والكبيرة .",
         " تقدم تكنولوجيا معلومات ذات مستوى عالمي . ",
         "وكالة رقمية للاستشارات التسويقية وتصميم المواقع الكترونية",
       ],

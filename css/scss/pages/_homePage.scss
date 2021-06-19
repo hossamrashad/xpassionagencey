@@ -458,8 +458,6 @@
   }
 }
 
-
-
 // count
 .count {
   background-image: url(../images/home-page/count/count.jpg);
@@ -517,171 +515,6 @@
           family: Arial, Helvetica, sans-serif;
         }
       }
-    }
-  }
-}
-
-// our-clients
-.our-clients {
-  background-color: $third-color;
-  padding: $main-padding 0;
-  .disc {
-    padding-bottom: $main-text-padding;
-    .h3 {
-      font-family: Oswald, sans-serif;
-      font-size: 40px;
-      font-weight: 700;
-      -webkit-text-fill-color: transparent;
-      background: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(0, $main-color),
-        to($second-color)
-      );
-      background: linear-gradient(to right, $main-color 0, $second-color 100%);
-      -pie-background: linear-gradient(to right, $main-color, $second-color);
-      -webkit-background-clip: text;
-      display: inline-block;
-      line-height: 1.28;
-      padding-bottom: 33px;
-    }
-    .h4 {
-      font-size: $page-font + 2;
-    }
-  }
-  .owl-carousel.owl-theme {
-    margin-top: $main-margin;
-    .item {
-      .inner {
-        padding: 30px 0 5px;
-        margin-bottom: 30px;
-        background-color: #f5f5f5;
-        text-align: center;
-        overflow: hidden;
-        @include boxShadow(-1px, 0px, 1px, $main-color);
-        width: 100%;
-        background-color: $color-fff;
-        height: 450px;
-        @include borderRadius(20px);
-        .picture {
-          display: inline-block;
-          height: 100px;
-          width: 100px;
-          z-index: 1;
-          position: relative;
-          border-radius: 20%;
-          &::before {
-            content: "";
-            width: 100%;
-            height: 0;
-            border-radius: 50%;
-            background-color: $second-color;
-            position: absolute;
-            right: 0;
-            left: 0;
-            opacity: 0.9;
-            transform: scale(3);
-            transition: all 0.3s linear 0s;
-          }
-          &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            border-radius: 50%;
-            background-color: #1f1b1b;
-          }
-          img {
-            width: 100%;
-            height: auto;
-            @include borderRadius(50%);
-            @include scale(1, 1);
-            @include transitionAll(all, 0.5s, linear);
-          }
-        }
-        p.lead {
-          padding: $main-text-padding 10px 10px 10px;
-          height: 250px;
-        }
-        .social {
-          list-style: none;
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
-          gap: 0px 0px;
-          margin-bottom: 20px;
-          padding: 5px;
-          @include transitionAll(all, 0.5s, linear);
-          @include translateY(200%);
-          // ltr
-          direction: rtl;
-          li {
-            a {
-              font-size: $page-font + 20;
-              @include borderRadius(50%);
-              &.fa-facebook {
-                color: #1877f2;
-                @include transitionAll(all, 0.5s, linear);
-                @include hover {
-                  @include boxShadow(-1px, 0px, 10px, #1877f2);
-                }
-              }
-              &.fa-youtube {
-                color: #ff0000;
-                @include transitionAll(all, 0.5s, linear);
-                @include hover {
-                  @include boxShadow(-1px, 0px, 10px, #ff0000);
-                }
-              }
-              &.fa-instagram {
-                color: #e1306c;
-                @include transitionAll(all, 0.5s, linear);
-                @include hover {
-                  @include boxShadow(-1px, 0px, 10px, #e1306c);
-                }
-              }
-              &.fa-twitter {
-                color: #1da1f2;
-                @include transitionAll(all, 0.5s, linear);
-                @include hover {
-                  @include boxShadow(-1px, 0px, 10px, #1da1f2);
-                }
-              }
-              &.fa-linkedin {
-                color: #caccce;
-                @include transitionAll(all, 0.5s, linear);
-                @include hover {
-                  @include boxShadow(-1px, 0px, 10px, #caccce);
-                }
-              }
-              &.fa-pinterest {
-                color: #e60023;
-                @include transitionAll(all, 0.5s, linear);
-                @include hover {
-                  @include boxShadow(-1px, 0px, 10px, #e60023);
-                }
-              }
-            }
-          }
-        }
-        @include hover {
-          .picture::before {
-            height: 100%;
-            margin-top: -100%;
-          }
-          .picture img {
-            box-shadow: 0 0 0 14px $main-color;
-            transform: scale(0.7);
-          }
-          .social {
-            @include translateY(0);
-          }
-        }
-      }
-    }
-    .owl-nav {
-      display: none;
     }
   }
 }
@@ -900,59 +733,10 @@
   }
 }
 
-// Our-work-speaks
-.Our-work-speaks {
-  padding-bottom: $main-padding;
-  .title {
-    font-family: Oswald, sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    -webkit-text-fill-color: transparent;
-    background: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      color-stop(0, $main-color),
-      to($second-color)
-    );
-    background: linear-gradient(to right, $main-color 0, $second-color 100%);
-    -pie-background: linear-gradient(to right, $main-color, $second-color);
-    -webkit-background-clip: text;
-    display: inline-block;
-    line-height: 1.28;
-    padding-bottom: 33px;
-  }
-  .parent-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
-    gap: 0px 10px;
-    @include xs-media {
-      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
-      gap: 0px 20px;
-    }
-    .value {
-      @include borderRadius(50%);
-      border: 2px solid $main-color;
-      .number {
-        color: $main-color;
-        font-weight: bold;
-        font-size: $font-lg;
-      }
-      i {
-        font-size: $font-lg + 10;
-        color: $third-color;
-      }
-      p.lead {
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 // our-team
 
 .our-team {
-  background-image: url(../../../images/page-about/our-team/our-team.jpg);
+  background-image: url(../images/page-about/our-team/our-team.jpg);
   background-position: center center;
   background-size: cover;
   padding-top: $main-padding;
@@ -1001,7 +785,348 @@
 }
 
 // ************** page portfolio *********
+// for mixitup
 
+main.main {
+  .mixitup {
+    padding: $main-padding 0px;
+    background-color: $third-color;
+    h3.h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 40px;
+    }
+    .parent-mixitup {
+      img {
+        width: 100%;
+      }
+      // controls button
+      div.controls {
+        text-align: center;
+        margin-bottom: 60px;
+        // button
+        button:focus {
+          outline: none;
+        }
+        button.mixitup-btn-style {
+          background: $main-color;
+          border: 1px solid $main-color;
+          color: $color-fff;
+          font-size: $font-page;
+          text-transform: uppercase;
+          font-weight: bold;
+          padding: 10px 20px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          @include transitionAll(all, 0.3s, linear);
+        }
+
+        button:hover,
+        button.mixitup-control-active {
+          background: $color-fff;
+          border: 1px solid $main-color;
+          color: $main-color;
+          @include borderRadius(5px);
+          @include boxShadow(-1px, 0px, 5px, $main-color);
+        }
+      }
+      // div parent item
+      div.portfolio-item {
+        div.single-item {
+          margin-bottom: 30px;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          //
+          div.img-erea {
+            img {
+              width: 100%;
+            }
+          }
+          div.img-disc {
+            @include overlay;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            @include transitionAll(all, 0.3s, linear);
+            cursor: pointer;
+            @include scaleY(0);
+            transform-origin: center center;
+            opacity: 0;
+            visibility: hidden;
+            color: $color-fff;
+            h3.h2 {
+              color: $main-color;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: $font-page + 4;
+              margin: 10px;
+            }
+            p.lead {
+              color: $color-fff;
+              font-size: $font-page;
+              padding: 0px 25px;
+            }
+          }
+          &:hover .img-disc {
+            @include scaleY(1);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+// **************  page blog **************
+
+main.main {
+  .main-blog {
+    padding-top: $main-padding;
+    padding-bottom: $main-padding;
+    .h3-disc,
+    .p-disc {
+      padding-bottom: $main-text-padding;
+    }
+    .jq-show-hide-box {
+      text-decoration: none;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 250px;
+      }
+      .img-text {
+        height: fit-content;
+        h3.h2 {
+          font-size: $page-font + 5;
+          padding: $main-text-padding 0 $main-text-padding - 20;
+          text-align: center;
+        }
+        p.lead {
+          font-size: $page-font;
+          padding-bottom: $main-text-padding;
+        }
+      }
+    }
+    .padding-bottom {
+      padding-bottom: $main-padding;
+    }
+  }
+}
+
+// **************  page contact **************
+
+main.main {
+  .main-contact-us {
+    padding: $main-padding 0;
+    .text-back-color {
+      font-family: Oswald, sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, $main-color),
+        to(#262524)
+      );
+      background: linear-gradient(to right, $main-color 0, #262524 100%);
+      -pie-background: linear-gradient(to right, $main-color, #262524);
+      -webkit-background-clip: text;
+      display: inline-block;
+      text-transform: uppercase;
+      line-height: 1.28;
+      padding-bottom: 33px;
+    }
+
+    .box-form {
+      margin-top: 25px;
+      form {
+        div.input-group {
+          margin-bottom: 30px;
+          width: 48%;
+          display: inline-block;
+          input,
+          textarea {
+            font-size: $page-font;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 90%;
+            border: 1px solid $third-color;
+            background-color: transparent;
+            color: $second-color;
+            margin: auto;
+            @include borderRadius(5px);
+            @include transitionAll(all, 0.5s, linear);
+            &:focus {
+              outline: none;
+              border: 1px solid $main-color;
+            }
+          }
+          label {
+            color: #999;
+            font-size: $page-font;
+            position: absolute;
+            pointer-events: none;
+            right: 30px;
+            top: 10px;
+            @include transitionAll(all, 0.3s, linear);
+          }
+          input:focus ~ label,
+          input:valid ~ label {
+            top: -20px;
+            font-size: $page-font - 3;
+            color: $main-color;
+          }
+          textarea:focus ~ label {
+            top: -20px;
+            font-size: $page-font - 3;
+            color: $main-color;
+          }
+        }
+        .checkbox.input-group {
+          input {
+            width: 10%;
+            display: inline-block;
+          }
+          span {
+            padding: 0 5px;
+            width: 90%;
+          }
+        }
+        a {
+          text-decoration: none;
+          background-color: $main-color;
+          color: #fff;
+          padding: 10px 35px;
+          margin-left: 40px;
+          @include borderRadius(5px);
+          text-transform: uppercase;
+          margin-top: 15px;
+          display: inline-block;
+          letter-spacing: 3px;
+          i {
+          }
+        }
+      }
+    }
+  }
+  .images-world {
+    background-image: url(https://hossamrashad.github.io/images-in-github/images/map/6.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+// ********* page free quote ************
+
+.main-page-free-quote {
+  .main-page {
+    padding: $main-padding 0;
+  }
+  .box-form {
+    margin-top: 25px;
+    form {
+      div.input-group {
+        margin-bottom: 30px;
+        width: 48%;
+        display: inline-block;
+        input,
+        textarea {
+          font-size: $page-font;
+          padding: 10px 10px 10px 5px;
+          display: block;
+          width: 90%;
+          border: 1px solid $third-color;
+          background-color: transparent;
+          color: $second-color;
+          margin: auto;
+          @include borderRadius(5px);
+          @include transitionAll(all, 0.5s, linear);
+          &:focus {
+            outline: none;
+            border: 1px solid $main-color;
+          }
+        }
+        label {
+          color: #999;
+          font-size: $page-font;
+          position: absolute;
+          pointer-events: none;
+          right: 30px;
+          top: 10px;
+          @include transitionAll(all, 0.3s, linear);
+        }
+        input:focus ~ label,
+        input:valid ~ label {
+          top: -20px;
+          font-size: $page-font - 3;
+          color: $main-color;
+        }
+        textarea:focus ~ label {
+          top: -20px;
+          font-size: $page-font - 3;
+          color: $main-color;
+        }
+      }
+      .checkbox.input-group {
+        input {
+          width: 10%;
+          display: inline-block;
+        }
+        span {
+          padding: 0 5px;
+          width: 90%;
+        }
+      }
+      a {
+        text-decoration: none;
+        background-color: $main-color;
+        color: #fff;
+        padding: 10px 35px;
+        margin-left: 40px;
+        @include borderRadius(5px);
+        text-transform: uppercase;
+        margin-top: 15px;
+        display: inline-block;
+        letter-spacing: 3px;
+        i {
+        }
+      }
+    }
+  }
+  .images-world {
+    margin-top: $main-text-padding;
+    background-image: url(https://hossamrashad.github.io/images-in-github/images/map/1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+// ********* page map  ************
+
+.main-page-map {
+  .main-page {
+    padding: $main-padding 0;
+  }
+
+  .images-world {
+    margin-top: $main-text-padding;
+    background-image: url(https://hossamrashad.github.io/images-in-github/images/map/7.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
 
 // ************** global ***************
 
@@ -1072,5 +1197,572 @@
         }
       }
     }
+  }
+}
+
+// Our-work-speaks
+.Our-work-speaks {
+  padding-bottom: $main-padding;
+  .title {
+    font-family: Oswald, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0, $main-color),
+      to($second-color)
+    );
+    background: linear-gradient(to right, $main-color 0, $second-color 100%);
+    -pie-background: linear-gradient(to right, $main-color, $second-color);
+    -webkit-background-clip: text;
+    display: inline-block;
+    line-height: 1.28;
+    padding-bottom: 33px;
+  }
+  .parent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    gap: 5px 10px;
+    @include xs-media {
+      grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+      gap: 20px 20px;
+    }
+    @include sm-md-media {
+      gap: 0px 0px;
+    }
+    .value {
+      @include borderRadius(50%);
+      border: 2px solid $main-color;
+      position: relative;
+      @include transitionAll(all, 0.5s, linear);
+      &::after {
+        content: "";
+        @include overlay;
+        background-image: linear-gradient(
+          to bottom,
+          $main-color 3%,
+          $second-color 100%
+        );
+        z-index: -1;
+        @include borderRadius(50%);
+      }
+
+      .number {
+        color: $text-color;
+        font-weight: bold;
+        font-size: $font-lg;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      i {
+        font-size: $font-lg + 10;
+        color: $color-fff;
+        margin-bottom: 20px;
+      }
+      p.lead {
+        font-weight: bold;
+        padding-bottom: 20px;
+        color: $text-color;
+        @include sm-md-media {
+          font-size: $page-font;
+        }
+      }
+      &:hover {
+        &::after {
+          background-image: linear-gradient(
+            to top,
+            $main-color 50%,
+            $second-color 100%
+          );
+        }
+      }
+    }
+  }
+}
+
+// our-clients
+.our-clients {
+  background-color: $third-color;
+  padding: $main-padding 0;
+  .disc {
+    padding-bottom: $main-text-padding;
+    .h3 {
+      font-family: Oswald, sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, $main-color),
+        to($second-color)
+      );
+      background: linear-gradient(to right, $main-color 0, $second-color 100%);
+      -pie-background: linear-gradient(to right, $main-color, $second-color);
+      -webkit-background-clip: text;
+      display: inline-block;
+      line-height: 1.28;
+      padding-bottom: 33px;
+    }
+    .h4 {
+      font-size: $page-font + 2;
+    }
+  }
+  .owl-carousel.owl-theme {
+    margin-top: $main-margin;
+    .item {
+      .inner {
+        padding: 30px 0 5px;
+        margin-bottom: 30px;
+        background-color: #f5f5f5;
+        text-align: center;
+        overflow: hidden;
+        @include boxShadow(-1px, 0px, 1px, $main-color);
+        width: 100%;
+        background-color: $color-fff;
+        height: 450px;
+        @include borderRadius(20px);
+        .picture {
+          display: inline-block;
+          height: 100px;
+          width: 100px;
+          z-index: 1;
+          position: relative;
+          border-radius: 20%;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 0;
+            border-radius: 50%;
+            background-color: $second-color;
+            position: absolute;
+            right: 0;
+            left: 0;
+            opacity: 0.9;
+            transform: scale(3);
+            transition: all 0.3s linear 0s;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 50%;
+            background-color: #1f1b1b;
+          }
+          img {
+            width: 100%;
+            height: auto;
+            @include borderRadius(50%);
+            @include scale(1, 1);
+            @include transitionAll(all, 0.5s, linear);
+          }
+        }
+        p.lead {
+          padding: $main-text-padding 10px 10px 10px;
+          height: 250px;
+        }
+        .social {
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
+          gap: 0px 0px;
+          margin-bottom: 20px;
+          padding: 5px;
+          @include transitionAll(all, 0.5s, linear);
+          @include translateY(200%);
+          background-color: $third-color;
+          padding-top: 10px;
+          // ltr
+          direction: rtl;
+          li {
+            a {
+              font-size: $page-font + 20;
+              @include borderRadius(50%);
+              &.fa-facebook {
+                color: #1877f2;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #1877f2);
+                }
+              }
+              &.fa-youtube {
+                color: #ff0000;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #ff0000);
+                }
+              }
+              &.fa-instagram {
+                color: #e1306c;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #e1306c);
+                }
+              }
+              &.fa-twitter {
+                color: #1da1f2;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #1da1f2);
+                }
+              }
+              &.fa-linkedin {
+                color: #caccce;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #caccce);
+                }
+              }
+              &.fa-pinterest {
+                color: #e60023;
+                @include transitionAll(all, 0.5s, linear);
+                @include hover {
+                  @include boxShadow(-1px, 0px, 10px, #e60023);
+                }
+              }
+            }
+          }
+        }
+        @include hover {
+          .picture::before {
+            height: 100%;
+            margin-top: -100%;
+          }
+          .picture img {
+            box-shadow: 0 0 0 14px $main-color;
+            transform: scale(0.7);
+          }
+          .social {
+            @include translateY(0);
+          }
+        }
+      }
+    }
+    .owl-nav {
+      display: none;
+    }
+  }
+}
+
+// whatsapp fixed
+// ltr
+.whatsapp-chat {
+  position: fixed;
+  bottom: 0;
+  right: 250px;
+  background: $main-color;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 99999;
+  transition: 0.3s ease-in;
+  height: 43px;
+  a {
+    color: #fff !important;
+    font-size: $page-font;
+    padding: 20px 10px;
+    text-decoration: none;
+    i {
+      margin-top: 10px;
+    }
+  }
+}
+
+// btn-show-popup
+.btn-show-popup-chat {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 245px;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  z-index: 9999;
+  // border: 1px solid $second-color;
+  background-color: $main-color;
+  color: $color-fff;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  outline: none;
+  @include borderRadius(5px);
+  @include transitionAll(all, 0.2s, linear);
+  @include hover {
+    border: none;
+    background-color: $second-color;
+    color: $main-color;
+    @include borderRadius(2px);
+  }
+}
+// popup chat
+.popup-chat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  height: 450px;
+  z-index: 9999;
+  background-color: $main-color;
+  display: none;
+  //
+  .inner {
+    position: fixed;
+    background-color: $color-fff;
+    width: 95%;
+    overflow: auto;
+    height: 400px;
+    padding: 15px;
+    p.lead {
+      font-size: $font-page;
+      text-align: center;
+    }
+    @include positionCenter;
+    @include borderRadius(5px);
+    .box-form {
+      margin-top: 25px;
+      form {
+        div.input-group {
+          margin-bottom: 30px;
+          input,
+          textarea {
+            font-size: $page-font;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            width: 90%;
+            border: 1px solid $third-color;
+            background-color: transparent;
+            color: $second-color;
+            margin: auto;
+            @include borderRadius(5px);
+            @include transitionAll(all, 0.5s, linear);
+            &:focus {
+              outline: none;
+              border: 1px solid $main-color;
+            }
+          }
+          label {
+            color: #999;
+            font-size: $page-font;
+            position: absolute;
+            pointer-events: none;
+            right: 20px;
+            top: 10px;
+            @include transitionAll(all, 0.3s, linear);
+          }
+          input:focus ~ label,
+          input:valid ~ label {
+            top: -20px;
+            font-size: $page-font - 3;
+            color: $main-color;
+          }
+          textarea:focus ~ label {
+            top: -20px;
+            font-size: $page-font - 3;
+            color: $main-color;
+          }
+        }
+        a {
+          text-decoration: none;
+          background-color: $main-color;
+          color: #fff;
+          padding: 10px 35px;
+          margin-left: 40px;
+          @include borderRadius(5px);
+          text-transform: uppercase;
+          margin-top: 15px;
+          display: inline-block;
+          letter-spacing: 3px;
+          i {
+          }
+        }
+      }
+    }
+    .close {
+      position: fixed;
+      bottom: 23px;
+      left: 5px;
+      padding: 13px 12px;
+      background-color: $second-color;
+      // border: 1px solid $main-color;
+      color: #fff;
+      @include borderRadius(5px);
+      cursor: pointer;
+    }
+  }
+}
+
+// google
+.google-rating {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  z-index: 1000;
+  a {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    @include boxShadow(-1px, 0px, 10px, #fff);
+    transition: width 0.3s cubic-bezier(0.405, 0.07, 0.575, 0.995);
+  }
+}
+
+// text back color
+.text-back-color {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0, $main-color),
+    to(#262524)
+  );
+  background: linear-gradient(to right, $main-color 0, #262524 100%);
+  -pie-background: linear-gradient(to right, $main-color, #262524);
+  -webkit-background-clip: text;
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 1.28;
+  padding-bottom: 33px;
+}
+
+// social-four
+.social-four {
+  display: inline-flex;
+  .social-name {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: $color-fff;
+    color: $color-fff;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: 500;
+    @include borderRadius(25px);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    &::before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      background-color: $color-fff;
+      left: 50%;
+      bottom: -6px;
+      transform: translateX(-50%) rotate(45deg);
+      -webkit-transform: translateX(-50%) rotate(45deg);
+      -moz-transform: translateX(-50%) rotate(45deg);
+      -ms-transform: translateX(-50%) rotate(45deg);
+      -o-transform: translateX(-50%) rotate(45deg);
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -moz-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -ms-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -o-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+  .icon {
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    span {
+      display: block;
+      height: 60px;
+      width: 60px;
+      @include borderRadius(50%);
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -webkit-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -moz-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -ms-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      -o-transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      color: $color-fff;
+      a {
+        line-height: 60px;
+        font-size: 25px;
+        color: $color-fff;
+      }
+    }
+    .span-facebook {
+      background-color: $facebook-color;
+    }
+    .span-twitter {
+      background-color: $twitter-color-1;
+    }
+    .span-youtube {
+      background-color: $youtube-color-1;
+    }
+    .span-linkedin {
+      background-color: $linkedin-color-1;
+    }
+    .span-instagram {
+      background-color: $instagram-color-1;
+    }
+    .span-pinterest {
+      background-color: $pinterest-color;
+    }
+   
+    @include hover {
+      .social-name {
+        top: -70px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+  .facebook:hover span,
+  .facebook:hover .social-name,
+  .facebook:hover .social-name::before {
+    background: $facebook-color;
+  }
+  .twitter:hover span,
+  .twitter:hover .social-name,
+  .twitter:hover .social-name::before {
+    background: $twitter-color-1;
+  }
+  .youtube:hover span,
+  .youtube:hover .social-name,
+  .youtube:hover .social-name::before {
+    background: $youtube-color-1;
+  }
+  .linkedin:hover span,
+  .linkedin:hover .social-name,
+  .linkedin:hover .social-name::before {
+    background: $linkedin-color-1;
+  }
+  .instagram:hover span,
+  .instagram:hover .social-name,
+  .instagram:hover .social-name::before {
+    background: $instagram-color-1;
+  }
+  .pinterest:hover span,
+  .pinterest:hover .social-name,
+  .pinterest:hover .social-name::before {
+    background: $pinterest-color;
   }
 }

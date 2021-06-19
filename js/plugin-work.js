@@ -142,7 +142,7 @@ $(document).ready(function () {
   // show and hide box
   $(function () {
     $(".jq-show-hide-box").expandable({
-      height: 250,
+      height: 375,
       expand_responsive: 768,
     });
   });
