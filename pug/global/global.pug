@@ -1,0 +1,20 @@
+//-  Start popup 
+span(class="btn btn-show-popup btn-show-popup-chat", data-popup=".show-parent-popup")إرسال رسالة
+
+div(class="popup-chat show-parent-popup") 
+    div(class="inner")
+        p(class="lead") يرجى ملء النموذج أدناه وسنعود إليك في أقرب وقت ممكن. 
+        div(class="box-form") 
+            form(action="")
+                div(class="input-group")
+                    input(type="text" required class="auto-direction")
+                    label(for="") * اسم االمستخدم
+                div(class="input-group")
+                    input(type="tel" required class="auto-direction")
+                    label(for="")  * رقم الهاتف
+                div(class="input-group")
+                    textarea(name="" id="" class="auto-direction")
+                    label(for="")  *  رسالة
+                a(href="#") إرسال  
+                    i(class="far fa-paper-plane")
+        i(class="fas fa-window-close close")

@@ -8860,6 +8860,7 @@ main.main .images-world {
 }
 
 .our-misson .parent-grid {
+  margin: 100px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(30%, 1fr))[auto-fill];
@@ -8871,7 +8872,7 @@ main.main .images-world {
   .our-misson .parent-grid {
     -ms-grid-columns: (minmax(100%, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    gap: 20px 0px;
+    gap: 0px 0px;
   }
 }
 
@@ -8884,13 +8885,189 @@ main.main .images-world {
 }
 
 .our-misson .parent-grid .disc {
-  background-color: #9c9c9c;
-  height: 400px;
+  background-color: #cbcbcb;
+  height: 600px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .our-misson .parent-grid .disc {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .our-misson .parent-grid .disc .img-area {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+  }
+  .our-misson .parent-grid .disc .img-area img {
+    height: 100%;
+  }
+  .our-misson .parent-grid .disc h4.h3 {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+  }
+  .our-misson .parent-grid .disc p.lead {
+    padding: 20px;
+  }
+}
+
+.our-misson .parent-grid .disc .img-area {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  height: 40%;
+}
+
+.our-misson .parent-grid .disc .img-area img {
+  height: 100%;
+  width: 100%;
+}
+
+.our-misson .parent-grid .disc h4.h3 {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.our-misson .parent-grid .disc p.lead {
+  padding: 20px;
 }
 
 .our-misson .parent-grid .disc-middel {
   background-color: #f5f5f5;
-  height: 400px;
+  height: 600px;
+}
+
+.our-misson .parent-grid .disc-middel .img-area {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  height: 40%;
+}
+
+.our-misson .parent-grid .disc-middel .img-area img {
+  height: 100%;
+  width: 100%;
+}
+
+.our-misson .parent-grid .disc-middel h4.h3 {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.our-misson .parent-grid .disc-middel p.lead {
+  padding: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .our-misson .parent-grid .disc-middel {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .our-misson .parent-grid .disc-middel .img-area {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+  }
+  .our-misson .parent-grid .disc-middel h4.h3 {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+  }
+  .our-misson .parent-grid .disc-middel p.lead {
+    padding: 20px;
+  }
+}
+
+.our-misson .parent-grid .disc-one {
+  position: relative;
+}
+
+.our-misson .parent-grid .disc-one:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: -40px;
+  margin-top: -20px;
+  border-style: solid;
+  border-width: 20px;
+  border-color: transparent #cbcbcb transparent transparent;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .our-misson .parent-grid .disc-one:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 102%;
+    margin-left: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent #cbcbcb transparent transparent;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .our-misson .parent-grid .disc-one:before {
+    content: none;
+  }
+}
+
+.our-misson .parent-grid .disc-tow {
+  position: relative;
+}
+
+.our-misson .parent-grid .disc-tow:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  right: 0px;
+  margin-top: -20px;
+  border-style: solid;
+  border-width: 20px;
+  border-color: transparent #f5f5f5 transparent transparent;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .our-misson .parent-grid .disc-tow:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 2.5%;
+    right: 45%;
+    margin-left: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent #f5f5f5 transparent transparent;
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .our-misson .parent-grid .disc-tow:before {
+    content: none;
+  }
 }
 
 .page-name {

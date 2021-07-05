@@ -1442,27 +1442,170 @@ main.main {
 
 // ********** page mission vision **********
 
-.our-misson{
-  .parent-grid{
-    display: grid;   
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));   
+.our-misson {
+  .parent-grid {
+    margin: $main-margin 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     gap: 0px 0px;
-    @include sm-md-media{
-      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));  
+    @include sm-md-media {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      gap: 0px 0px;
+    }
+    @include xs-media {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
       gap: 20px 0px;
+    }
+
+    .disc {
+      background-color: $color-cb;
+      height: 600px;
+      @include sm-md-media {
+        height: fit-content;
+        .img-area {
+          width: 90%;
+          margin: auto;
+          padding: 20px;
+          img{
+            height: 100%;
+          }
+        }
+        h4.h3 {
+          text-align: center;
+          font-size: $font-sm;
+          padding: 20px;
+        }
+        p.lead {
+          padding: 20px;
+        }
       }
-    @include xs-media{
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));  
-    gap: 20px 0px;
+      .img-area {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        height: 40%;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      h4.h3 {
+        text-align: center;
+        font-size: $font-sm;
+        padding: 20px;
+      }
+      p.lead {
+        padding: 20px;
+      }
     }
-    
-    .disc{
-      background-color: $text-color;
-      height: 400px;
-    }
-    .disc-middel{
+    .disc-middel {
       background-color: $third-color;
-      height: 400px;
+      height: 600px;
+      .img-area {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        height: 40%;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      h4.h3 {
+        text-align: center;
+        font-size: $font-sm;
+        padding: 20px;
+      }
+      p.lead {
+        padding: 20px;
+      }
+      @include sm-md-media {
+        height: fit-content;
+        .img-area {
+          width: 90%;
+          margin: auto;
+          padding: 20px;
+        }
+        h4.h3 {
+          text-align: center;
+          font-size: $font-sm;
+          padding: 20px;
+        }
+        p.lead {
+          padding: 20px;
+        }
+      }
+    }
+    .disc-one {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: -40px;
+        margin-top: -20px;
+        border-style: solid;
+        border-width: 20px;
+        border-color: transparent $color-cb transparent transparent;
+      }
+      @include sm-md-media {
+        &:before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          left: 50%;
+          top: 102%;
+          margin-left: -20px;
+          border-style: solid;
+          border-width: 20px;
+          border-color: transparent $color-cb transparent transparent;
+          @include rotate(270deg);
+        }
+      }
+      @include xs-media {
+        &:before {
+          content: none;
+        }
+      }
+    }
+    .disc-tow {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        right: 0px;
+        margin-top: -20px;
+        border-style: solid;
+        border-width: 20px;
+        border-color: transparent $third-color transparent transparent;
+      }
+      @include sm-md-media {
+        &:before {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          left: 50%;
+          top: 2.5%;
+          right: 45%;
+          margin-left: -20px;
+          border-style: solid;
+          border-width: 20px;
+          border-color: transparent $third-color transparent transparent;
+          @include rotate(270deg);
+        }
+      }
+      @include xs-media {
+        &:before {
+          content: none;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,125 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?a173e6289c62ca0cc85e6a7d8cb3d5b0") format("truetype"),
+url("./flaticon.woff?a173e6289c62ca0cc85e6a7d8cb3d5b0") format("woff"),
+url("./flaticon.woff2?a173e6289c62ca0cc85e6a7d8cb3d5b0") format("woff2"),
+url("./flaticon.eot?a173e6289c62ca0cc85e6a7d8cb3d5b0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?a173e6289c62ca0cc85e6a7d8cb3d5b0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "books-stack-of-three": "\f101",
+    "view-details": "\f102",
+    "man": "\f103",
+    "team": "\f104",
+    "user": "\f105",
+    "employees": "\f106",
+    "woman": "\f107",
+    "user-1": "\f108",
+    "house-with-chimney": "\f109",
+    "homepage": "\f10a",
+    "search-homepage": "\f10b",
+    "home": "\f10c",
+    "home-1": "\f10d",
+    "home-2": "\f10e",
+    "house": "\f10f",
+    "home-3": "\f110",
+    "home-4": "\f111",
+    "home-5": "\f112",
+    "home-6": "\f113",
+    "home-7": "\f114",
+    "home-8": "\f115",
+    "home-9": "\f116",
+    "house-outline": "\f117",
+    "home-10": "\f118",
+    "home-11": "\f119",
+);
+
+.flaticon-books-stack-of-three:before {
+    content: map-get($flaticon-map, "books-stack-of-three");
+}
+.flaticon-view-details:before {
+    content: map-get($flaticon-map, "view-details");
+}
+.flaticon-man:before {
+    content: map-get($flaticon-map, "man");
+}
+.flaticon-team:before {
+    content: map-get($flaticon-map, "team");
+}
+.flaticon-user:before {
+    content: map-get($flaticon-map, "user");
+}
+.flaticon-employees:before {
+    content: map-get($flaticon-map, "employees");
+}
+.flaticon-woman:before {
+    content: map-get($flaticon-map, "woman");
+}
+.flaticon-user-1:before {
+    content: map-get($flaticon-map, "user-1");
+}
+.flaticon-house-with-chimney:before {
+    content: map-get($flaticon-map, "house-with-chimney");
+}
+.flaticon-homepage:before {
+    content: map-get($flaticon-map, "homepage");
+}
+.flaticon-search-homepage:before {
+    content: map-get($flaticon-map, "search-homepage");
+}
+.flaticon-home:before {
+    content: map-get($flaticon-map, "home");
+}
+.flaticon-home-1:before {
+    content: map-get($flaticon-map, "home-1");
+}
+.flaticon-home-2:before {
+    content: map-get($flaticon-map, "home-2");
+}
+.flaticon-house:before {
+    content: map-get($flaticon-map, "house");
+}
+.flaticon-home-3:before {
+    content: map-get($flaticon-map, "home-3");
+}
+.flaticon-home-4:before {
+    content: map-get($flaticon-map, "home-4");
+}
+.flaticon-home-5:before {
+    content: map-get($flaticon-map, "home-5");
+}
+.flaticon-home-6:before {
+    content: map-get($flaticon-map, "home-6");
+}
+.flaticon-home-7:before {
+    content: map-get($flaticon-map, "home-7");
+}
+.flaticon-home-8:before {
+    content: map-get($flaticon-map, "home-8");
+}
+.flaticon-home-9:before {
+    content: map-get($flaticon-map, "home-9");
+}
+.flaticon-house-outline:before {
+    content: map-get($flaticon-map, "house-outline");
+}
+.flaticon-home-10:before {
+    content: map-get($flaticon-map, "home-10");
+}
+.flaticon-home-11:before {
+    content: map-get($flaticon-map, "home-11");
+}

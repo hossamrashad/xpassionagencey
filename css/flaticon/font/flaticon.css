@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?a173e6289c62ca0cc85e6a7d8cb3d5b0") format("truetype"),
+url("./flaticon.woff?a173e6289c62ca0cc85e6a7d8cb3d5b0") format("woff"),
+url("./flaticon.woff2?a173e6289c62ca0cc85e6a7d8cb3d5b0") format("woff2"),
+url("./flaticon.eot?a173e6289c62ca0cc85e6a7d8cb3d5b0#iefix") format("embedded-opentype"),
+url("./flaticon.svg?a173e6289c62ca0cc85e6a7d8cb3d5b0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-books-stack-of-three:before {
+    content: "\f101";
+}
+.flaticon-view-details:before {
+    content: "\f102";
+}
+.flaticon-man:before {
+    content: "\f103";
+}
+.flaticon-team:before {
+    content: "\f104";
+}
+.flaticon-user:before {
+    content: "\f105";
+}
+.flaticon-employees:before {
+    content: "\f106";
+}
+.flaticon-woman:before {
+    content: "\f107";
+}
+.flaticon-user-1:before {
+    content: "\f108";
+}
+.flaticon-house-with-chimney:before {
+    content: "\f109";
+}
+.flaticon-homepage:before {
+    content: "\f10a";
+}
+.flaticon-search-homepage:before {
+    content: "\f10b";
+}
+.flaticon-home:before {
+    content: "\f10c";
+}
+.flaticon-home-1:before {
+    content: "\f10d";
+}
+.flaticon-home-2:before {
+    content: "\f10e";
+}
+.flaticon-house:before {
+    content: "\f10f";
+}
+.flaticon-home-3:before {
+    content: "\f110";
+}
+.flaticon-home-4:before {
+    content: "\f111";
+}
+.flaticon-home-5:before {
+    content: "\f112";
+}
+.flaticon-home-6:before {
+    content: "\f113";
+}
+.flaticon-home-7:before {
+    content: "\f114";
+}
+.flaticon-home-8:before {
+    content: "\f115";
+}
+.flaticon-home-9:before {
+    content: "\f116";
+}
+.flaticon-house-outline:before {
+    content: "\f117";
+}
+.flaticon-home-10:before {
+    content: "\f118";
+}
+.flaticon-home-11:before {
+    content: "\f119";
+}

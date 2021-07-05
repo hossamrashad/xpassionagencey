@@ -1,0 +1,15 @@
+include pug/variables/variables.pug
+include pug/mixin/mixin.pug
+doctype 
+html(lang="ar" dir="rtl") 
+    head 
+        //- start head  
+        include pug/head-html/head.pug
+        block pageTitle
+            title اكس باشون | مهنتنا و روئيتنا
+        //- end head
+        style body{height: 2000px}
+    body 
+        //- start body 
+        include pug/header-body/header-body.pug
+
