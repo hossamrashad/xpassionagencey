@@ -1,15 +1,77 @@
 include pug/variables/variables.pug
 include pug/mixin/mixin.pug
 doctype 
-html(lang="ar" dir="rtl") 
+html(lang="ar" dir="rtl" data-theme="light") 
     head 
         //- start head  
         include pug/head-html/head.pug
         block pageTitle
             title اكس باشون | مهنتنا و روئيتنا
         //- end head
-        style body{height: 2000px}
+        
     body 
         //- start body 
+
+        //- header 
         include pug/header-body/header-body.pug
+        //- header 
+        //- start main
+        main(class="main")
+            //- Start slider
+            include pug/slider/slider.pug
+            //- Start slider 
+
+            //- start page name
+            div(class="page-name")
+                nav(style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb")
+                    ol(class="breadcrumb")
+                        li(class="breadcrumb-item")
+                            a(href="index-rtl.html") الصفحة الرئيسية
+                        li(class="breadcrumb-item active" aria-current="page") مهنتنا و روئيتنا
+            //- end page name
+            //- 
+            section(class="main-page-call our-misson" id="main-page-call") 
+                div(class="main-page-disc-team")
+                    div(class="title text-capitalize text-center")
+                        h4(class="h3 text-back-color") مهمتنا ورؤيتنا
+                        h5(class="h4")  نقوم بتمكين التحول المستمر للمؤسسة بسرعة وعلى نطاق واسع.
+                        p(class="lead") نحن شركة إبداعية نعمل بشغف وحب. نحن نقدم أفضل الخدمات التي تحتاجها. نحن نساعدك على التحسن ، ونفخر بمساعدة عملائنا على تحقيق نتائج رائعة عندما يتعلق الأمر بمشاريعهم. من البيانات إلى الأداء ، قمنا بتغطيتك.
+
+                    div(class="container")
+                        div(class="parent-grid")
+                            div(class="disc disc-one")
+                                div(class="img-area")
+                                    img(src="https://hossamrashad.github.io/images-in-github/images/tablets/2.webp", class="img-fluid img-thumbnail")
+                                h4(class="h3") مهمتنا.
+                                p(class="lead") نحن نعرف أيضًا تلك القصص الملحمية ، تلك الأساطير الحديثة التي تحيط بالفشل المبكر لأشخاص ناجحين للغاية مثل مايكل جوردان وبيل جيتس.
+
+
+
+
+            //- 
+        //- end main
+
+        //- start map
+        +map
+        //- end map
+
+        //- footer 
+        include pug/footer-body/footer-body.pug
+        //- footer
+
+        //- global 
+        include pug/global/global.pug
+        //- global
+
+        //- 
+        
+        
+        //- 
+        //- script
+        include pug/script-html/script.pug
+        //- script
+
+        //- End body 
+
+
 

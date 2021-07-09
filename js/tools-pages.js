@@ -12,12 +12,12 @@
 
 
 // background move
-$(document).ready(function () {
-    "use strict";
-    $(".jq-backmove").backgroundMove({
-      movementStrength: "50",
-    });
-  });
+// $(document).ready(function () {
+//     "use strict";
+//     $(".jq-backmove").backgroundMove({
+//       movementStrength: "50",
+//     });
+//   });
 
 
 /* padding navbar height */

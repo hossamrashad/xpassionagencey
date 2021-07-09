@@ -1,5 +1,6 @@
+
 //-  Start popup 
-span(class="btn btn-show-popup btn-show-popup-chat", data-popup=".show-parent-popup")إرسال رسالة
+span(class="btn btn-show-popup btn-show-popup-chat" data-popup=".show-parent-popup") إرسال رسالة
 
 div(class="popup-chat show-parent-popup") 
     div(class="inner")
@@ -18,3 +19,49 @@ div(class="popup-chat show-parent-popup")
                 a(href="#") إرسال  
                     i(class="far fa-paper-plane")
         i(class="fas fa-window-close close")
+
+//- start scroll to top
+a(href="#" class="scroll-to-top" id="scroll-to-top-2")
+    i(class="fa fa-chevron-circle-up fa-2x fa-fw")
+
+//- Start whatsapp chat
+div(class="whatsapp-chat")
+    a(href="https://wa.me/0201069658891" target="_blank")
+        i(class="fab fa-whatsapp fa-2x fa-fw")
+
+
+//- Start img google
+div(class="google-rating")
+    a(href="https://www.google.com.eg/search?dcr=0&sxsrf=ALeKk02cLYFj-zDSMntPGd0MN-6duaWJzA:1623826708277&q=xpassion+agency&spell=1&sa=X&ved=2ahUKEwjokv7wyZvxAhVW14UKHRUFAp0QBSgAegQIARA5&biw=1206&bih=927" target="_blank")
+        img(src="images/home-page/google/new-rating-google.jpg" alt="Google Rating" class="img-fluid")
+
+
+
+
+
+//-  Options website
+div(class="fixed-menu-options-padding-body")
+    i(class="fa fa-bars fa-fw fa-2x" aria-hidden="true")
+    //- toggle color
+    h4(class="h3 text-center main-color") color
+    div(class="parent-toggle-color ")
+        input(type="checkbox" id="switch" name="theme")
+        label(for="switch") Toggle
+
+    input( list='fontArOptions' class='fontArOptions' placeholder='set font Ar')
+    datalist(id="fontArOptions")
+        option(value="Cairo, sans-serif") 
+        option(value="DroidKufi-regular") 
+        option(value="Droid Arabic Kufi") 
+        option(value="Short Stack, cursive") 
+        option(value="Tajawal, sans-serif") 
+        option(value="Markazi Text, serif") 
+        option(value="El Messiri, sans-serif") 
+        option(value="Changa, sans-serif") 
+        option(value="Mirza, cursive") 
+        option(value="Lateef, cursive") 
+        option(value="Scheherazade, serif")
+    button(class='fontArBtnOptions') Show Font 
+
+
+

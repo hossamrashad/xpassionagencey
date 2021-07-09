@@ -11,13 +11,11 @@ body {
     &::before {
       content: "xs = 0px To 767px";
       position: fixed;
-      bottom: 10px;
-      left: 20px;
+      bottom: 0px;
+      left: 175px;
       width: fit-content;
-      height: 50px;
       color: #fff;
       background-color: #333;
-      font-size: 30px;
       text-align: center;
       text-transform: capitalize;
       border: 2px solid#fafafa;
@@ -31,13 +29,11 @@ body {
     &::before {
       content: "Sm = 768px To 991px";
       position: fixed;
-      bottom: 20px;
-      left: 20px;
+      bottom: 0px;
+      left: 175px;
       width: fit-content;
-      height: 50px;
       color: #fff;
       background-color: #333;
-      font-size: 30px;
       text-align: center;
       text-transform: capitalize;
       border: 2px solid#fafafa;
@@ -50,13 +46,11 @@ body {
     &::before {
       content: "Md = 992px To 1199px";
       position: fixed;
-      bottom: 20px;
-      left: 20px;
+      bottom: 0px;
+      left: 175px;
       width: fit-content;
-      height: 50px;
       color: #fff;
       background-color: #333;
-      font-size: 30px;
       text-align: center;
       text-transform: capitalize;
       border: 2px solid#fafafa;
@@ -69,13 +63,11 @@ body {
     &::before {
       content: "lg = 1200px to Top";
       position: fixed;
-      bottom: 10px;
-      left: 10px;
+      bottom: 0px;
+      left: 175px;
       width: fit-content;
-      height: 50px;
       color: #fff;
       background-color: #333;
-      font-size: 30px;
       text-align: center;
       text-transform: capitalize;
       border: 2px solid#fafafa;

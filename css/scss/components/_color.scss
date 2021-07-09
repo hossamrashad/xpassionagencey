@@ -1,3 +1,4 @@
+@import "../helpers/mixin";
 // color
 $main-color: #ef3139;
 $second-color: #262524;
@@ -5,102 +6,24 @@ $third-color: #f5f5f5;
 $color-fff: #fff;
 $text-color: #6a6a6a;
 $color-cb: #cbcbcb;
-
 $color-3498db: #3498db;
 $text-color: #9c9c9c;
 $color-fff: #fff;
+$color-999: #999999;
 $color-000: #000;
 $color-333: #333;
 $color-f1f1f1: #f1f1f1;
-
 // color: map-get($colors, 1);
-$colors: (
-  fff: #ffffff,
-  2: #e4fbff,
-  3: #ecf0f1,
-  4: #f4f9f9,
-  eee: #eeeeee,
-  ccc: #cccccc,
-  7: #95a5a6,
-  969: #969696,
-  9: #737373,
-  10: #766a65,
-  11: #9e9d89,
-  999: #999999,
-  13: #666666,
-  14: #caf7e3,
-  21: #0099e5,
-  22: #0984e3,
-  23: #2980b9,
-  24: #0652dd,
-  25: #0066a1,
-  046582: #046582,
-  27: #4a47a3,
-  28: #34495e,
-  3498db: #3498db,
-  41: #34bf49,
-  42: #00a98f,
-  43: #12cbc4,
-  44: #1abc9c,
-  45: #2c9f45,
-  46: #289672,
-  29bb89: #29bb89,
-  48: #1e6f5c,
-  49: #009688,
-  080: #008800,
-  ed4c67: #ed4c67,
-  62: #f14668,
-  63: #be0027,
-  c00: #cc0000,
-  65: #ff4c4c,
-  66: #e74c3c,
-  67: #6b011f,
-  68: #6b011f,
-  69: #4f1302,
-  70: #432d0f,
-  71: #f39189,
-  72: #bb8082,
-  73: #e91e63,
-  f00: #ff0000,
-  81: #e67e22,
-  82: #f1c40f,
-  83: #f39c12,
-  84: #cf8d2e,
-  85: #e4e932,
-  200: #629aa9,
-  201: #545963,
-  202: #709fb0,
-  203: #6c5ce7,
-  204: #7868e6,
-  205: #3c415c,
-  206: #301b3f,
-  000: #000000,
-  333: #333333,
-);
-
-// root
-// background: var(--color-3498db);
-:root {
-  --color-3498db: #3498db;
-  --color-fff: #ffffff;
-  --color-000: #0000000;
-  --color-333: #333333;
-  --color-f00: #ff0000;
-  --color-080: #008800;
-}
-
+$colors: ( fff: #ffffff, 2: #e4fbff, 3: #ecf0f1, 4: #f4f9f9, eee: #eeeeee, ccc: #cccccc, 7: #95a5a6, 969: #969696, 9: #737373, 10: #766a65, 11: #9e9d89, 999: #999999, 13: #666666, 14: #caf7e3, 21: #0099e5, 22: #0984e3, 23: #2980b9, 24: #0652dd, 25: #0066a1, 046582: #046582, 27: #4a47a3, 28: #34495e, 3498db: #3498db, 41: #34bf49, 42: #00a98f, 43: #12cbc4, 44: #1abc9c, 45: #2c9f45, 46: #289672, 29bb89: #29bb89, 48: #1e6f5c, 49: #009688, 080: #008800, ed4c67: #ed4c67, 62: #f14668, 63: #be0027, c00: #cc0000, 65: #ff4c4c, 66: #e74c3c, 67: #6b011f, 68: #6b011f, 69: #4f1302, 70: #432d0f, 71: #f39189, 72: #bb8082, 73: #e91e63, f00: #ff0000, 81: #e67e22, 82: #f1c40f, 83: #f39c12, 84: #cf8d2e, 85: #e4e932, 200: #629aa9, 201: #545963, 202: #709fb0, 203: #6c5ce7, 204: #7868e6, 205: #3c415c, 206: #301b3f, 000: #000000, 333: #333333, );
 $facebook-color: #1877f2;
-
 $twitter-color-1: #1da1f2;
 $twitter-color-2: #14171a;
 $twitter-color-3: #657786;
 $twitter-color-4: #aab8c2;
 $twitter-color-5: #e1e8ed;
 $twitter-color-6: #f5f8fa;
-
 $youtube-color-1: #ff0000;
 $youtube-color-2: #282828;
-
 $linkedin-color-1: #0077b5;
 $linkedin-color-2: #000000;
 $linkedin-color-3: #313335;
@@ -110,7 +33,6 @@ $linkedin-color-6: #00a0dc;
 $linkedin-color-7: #8d6cab;
 $linkedin-color-8: #dd5143;
 $linkedin-color-9: #e68523;
-
 $instagram-color-1: #e1306c;
 $instagram-color-2: #c13584;
 $instagram-color-3: #fd1d1d;
@@ -121,5 +43,209 @@ $instagram-color-7: #ffdc80;
 $instagram-color-8: #fcaf45;
 $instagram-color-9: #f77737;
 $instagram-color-10: #f56040;
-
 $pinterest-color: #e60023;
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+    transition: all 750ms !important;
+    -webkit-transition: all 750ms !important;
+    -moz-transition: all 750ms !important;
+    -ms-transition: all 750ms !important;
+    -o-transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+html {
+    --global-background: #fcfcfc;
+    --background-panel: #ebebeb;
+    --color-text: #333;
+    --color-text-1: #fff;
+    --main-color: #ef3139;
+    --second-color: #262524;
+    --third-color: #f5f5f5;
+    --text-same-color-fff: #fff;
+    --head-p-footer: #ef3139;
+}
+
+html[data-theme="dark"] {
+    --global-background: #333;
+    --background-panel: #434343;
+    --color-text: #b5b5b5;
+    --color-text-1: #fff;
+    --main-color: #262524;
+    --second-color: #ef3139;
+    --third-color: #f5f5f5;
+    --text-same-color-fff: #fff;
+    --head-p-footer: #fff;
+}
+
+// color || background-color
+.color-fff {
+    color: map-get($colors, fff);
+}
+
+.back-fff {
+    background-color: $color-fff;
+}
+
+.color-999 {
+    color: $color-999;
+}
+
+.back-999 {
+    background-color: map-get($colors, 999);
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.main-back {
+    background-color: var(--main-color);
+}
+
+.second-color {
+    color: var(--second-color);
+}
+
+.second-back {
+    background-color: var(--second-color);
+}
+
+.third-color {
+    color: var(--third-color);
+}
+
+.back-third {
+    background-color: var(--third-color);
+}
+
+.main-border {
+    border: 1px solid var(--main-color);
+}
+
+.second-border {
+    border: 1px solid var(--second-color);
+}
+
+.third-border {
+    border: 1px solid var(--third-color);
+}
+
+// change all color
+
+/*
+div(class="parent-toggle-color")
+    input(type="checkbox" id="switch" name="theme")
+    label(for="switch") Toggle
+*/
+
+// root
+// background: var(--color-3498db);
+:root {
+    --color-3498db: #3498db;
+    --color-fff: #ffffff;
+    --color-000: #0000000;
+    --color-333: #333333;
+    --color-f00: #ff0000;
+    --color-080: #008800;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.fixed-menu-options,
+.fixed-menu-options-padding-body {
+    background-color: var(--third-color);
+    color: $color-fff;
+    padding: 10px 10px;
+    position: fixed;
+    left: -250px;
+    top: 0%;
+    height: 1000%;
+    width: 250px;
+    z-index: 9999;
+    @include borderRadiusposition(0px, 5px, 0px, 5px);
+    i {
+        position: absolute;
+        right: -40px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: var(--second-color);
+        @include borderRadiusposition(0px, 10px, 0px, 10px);
+        font-size: 30px;
+        cursor: pointer;
+    }
+    a {
+        color: $color-fff;
+        margin: 30px 0px;
+        display: block;
+        text-align: center;
+    }
+    .parent-toggle-color {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        position: relative;
+        input[type="checkbox"] {
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+        label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 52px;
+            height: 27px;
+            background: gray;
+            float: left;
+            position: relative;
+            @include borderRadius(100px);
+            &:after {
+                content: "";
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                @include borderRadius(90px);
+                @include transitionAll(all, 0.3s, linear);
+            }
+        }
+        input:checked+label {
+            background: var(--main-color);
+        }
+        input:checked+label::after {
+            left: calc(100% - 3px);
+            @include translateX(-100%);
+        }
+        label:active:after {
+            width: 45px;
+        }
+    }
+    input[list="fontArOptions"] {
+        width: 85%;
+        margin: 50px auto 10px;
+        display: block;
+        @include borderRadius(5px);
+    }
+    .fontArBtnOptions {
+        display: block;
+        margin: auto;
+        outline: none;
+        box-shadow: none;
+        border: 2px solid #333;
+        padding: 5px 15px;
+        background: var(--background);
+        color: var(--color-text);
+        font-weight: 600;
+        @include borderRadius(5px);
+    }
+}
